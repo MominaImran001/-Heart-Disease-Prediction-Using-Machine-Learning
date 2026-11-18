@@ -1,80 +1,91 @@
-# Heart-Detection-Model
-Heart Disease Prediction Using Machine Learning
+# Heart-Disease-Prediction-ML
+# Heart Disease Prediction Using Machine Learning
 
-#Project Overview
+**A Machine Learning project that uses a Random Forest Classifier to predict heart disease based on selected patient health features.**
 
-This project focuses on developing a Machine Learning model to predict heart disease using patient health data. It uses the Random Forest Classifier to analyze selected medical features and classify heart disease outcomes.
+##  Project Overview**
 
-#Technologies & Libraries
+This project focuses on building a Heart Disease Prediction model using Python and Machine Learning. The model analyzes selected medical attributes of patients to classify heart disease outcomes.
 
-Python
+A Random Forest Classifier is trained on the heart disease dataset, evaluated using standard classification metrics, and saved using Pickle for future use.
 
-Pandas
+##  Project Objectives**
 
-NumPy
+- Develop a machine learning model for heart disease prediction.
+- Identify relevant features from the dataset.
+- Train and evaluate a Random Forest Classification model.
+- Save the trained model for future predictions.
 
-Scikit-learn
+## Technologies & Libraries**
 
-Pickle
+- **Python** – Programming language
+- **Pandas** – Data manipulation and analysis
+- **NumPy** – Numerical operations
+- **Scikit-learn** – Model training and evaluation
+- **Pickle** – Model serialization
+- **Jupyter Notebook** – Development environment
 
-Jupyter Notebook
+##  Dataset & Features**
 
-#Features Used:
+The project uses a heart disease dataset (`heart.csv`).
 
-The model uses the following six features:
+The following six features are selected for model training:
 
-Age
+| Feature | Description |
+|---|---|
+| `age` | Age of the patient |
+| `sex` | Gender of the patient |
+| `cp` | Chest pain type |
+| `exang` | Exercise-induced angina |
+| `thalach` | Maximum heart rate achieved |
+| `oldpeak` | ST depression induced by exercise |
 
-Sex
+**Target Variable:** `target`
 
-Chest Pain Type (cp)
+##  Project Workflow**
 
-Exercise-Induced Angina (exang)
+1. **Data Loading:** Import the heart disease dataset using Pandas.
+2. **Feature Selection:** Select six relevant medical features.
+3. **Target Preparation:** Transform the target labels for the intended classification output.
+4. **Data Splitting:** Divide the dataset into 80% training and 20% testing data using stratified sampling.
+5. **Model Training:** Train a Random Forest Classifier.
+6. **Model Evaluation:** Evaluate predictions using accuracy, confusion matrix, precision, recall, and F1-score.
+7. **Model Saving:** Export the trained model using Pickle.
 
-Maximum Heart Rate Achieved (thalach)
+##  Machine Learning Model**
 
-ST Depression (oldpeak)
+**Algorithm:** Random Forest Classifier
 
-Project Workflow
+The model is implemented using Scikit-learn's `RandomForestClassifier` with a fixed random state for reproducibility.
 
-Load the heart disease dataset.
+##  Model Evaluation**
 
-Select relevant features for model training.
+The model's performance is evaluated using:
 
-Prepare and transform target labels.
+- Accuracy Score
+- Confusion Matrix
+- Classification Report
+- Precision
+- Recall
+- F1-Score
 
-Split the dataset into training and testing sets using stratified sampling.
+##  Model Serialization**
 
-Train a Random Forest Classifier.
+The trained model is saved in `.pkl` format using Python's Pickle library.
 
-Evaluate model performance using accuracy, confusion matrix, and classification report.
+**Model File:** `heart_model_fixed_selected_features11.pkl`
 
-Save the trained model using Pickle for future use.
+This allows the trained model to be loaded and reused without training it again.
 
-Model
 
-Random Forest Classifier
 
-The dataset is divided into 80% training data and 20% testing data.
+##  Future Improvements**
 
-Model Evaluation
+- Perform hyperparameter tuning to improve model performance.
+- Compare Random Forest with other classification algorithms.
+- Implement a user-friendly prediction interface.
+- Explore additional medical features for improved model evaluation.
 
-The model is evaluated using:
+##  Disclaimer**
 
-Accuracy Score
-
-Confusion Matrix
-
-Precision
-
-Recall
-
-F1-Score
-
-Model Export
-
-The trained model is saved as a .pkl file using Pickle, allowing it to be reused without retraining.
-
-Disclaimer
-
-This project is developed for educational and machine learning practice purposes only. It is not intended to replace professional medical diagnosis.
+This project is developed for educational and machine learning practice purposes only. It is not intended to provide medical advice or replace professional medical diagnosis.
